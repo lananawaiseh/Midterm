@@ -1,0 +1,344 @@
+/* 1. Root Variables & Global Reset */
+:root {
+    /* --- LATTE COLOR PALETTE --- */
+    --blk-primary-bg: #FAF7F3; /* Creamy Latte Base */
+    --blk-secondary-bg: #3F2A1E; /* Rich Espresso Base */
+    --blk-contrast-shadow: #24160E; /* Dark Roast */
+    --blk-accent: #fae2c8; /* Caramel/Honey */
+    --blk-text-light: #FAF7F3; /* Cream Text */
+    --blk-text-dark: #24160E; /* Dark Text */
+    --blk-secondary-text: #5B3A29; /* Medium Brown */
+    
+    /* Layout Variables */
+    --max-width: 1400px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--blk-primary-bg);
+    color: var(--blk-text-dark);
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.6;
+    text-transform: none;
+}
+
+.blk-title-font {
+    font-family: 'Arial Black', Impact, sans-serif;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+.accent-color { color: var(--blk-accent); }
+.secondary-color { color: var(--blk-secondary-text); }
+
+a {
+    text-decoration: none;
+    color: inherit;
+    position: relative; 
+    z-index: 50; 
+}
+
+.container {
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+
+/* --- 2. HEADER & NAVIGATION --- */
+.main-header {
+    background-color: var(--blk-secondary-bg);
+    color: var(--blk-text-light);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 100; 
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1rem;
+}
+
+.logo {
+    @apply blk-title-font;
+    font-size: 2rem;
+    letter-spacing: 0.2em;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-link {
+    @apply blk-title-font;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.5rem 0.25rem;
+    transition: color 0.2s;
+}
+
+.nav-link:hover, .current-page {
+    color: var(--blk-accent);
+}
+
+/* --- 3. MAIN CONTENT --- */
+.main-content {
+    flex-grow: 1;
+    padding: 3rem 0;
+}
+
+/* Index Hero */
+.hero-section {
+    min-height: 60vh;
+    background-color: var(--blk-secondary-bg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('BG.png');
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 2rem;
+}
+
+.hero-title {
+    @apply blk-title-font;
+    font-size: 0.1rem;
+    letter-spacing: 0.15em;
+    line-height: 5rem; 
+    margin-bottom: 4rem;
+    text-shadow: 4px 4px 0 var(--blk-contrast-shadow);
+    color: var(--blk-text-light); 
+    position: left;
+    z-index: 2;
+}
+
+.cta-button {
+    @apply blk-title-font;
+    background-color: var(--blk-accent);
+    color: var(--blk-text-dark);
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    padding: 1rem 3rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.2s, transform 0.2s, box-shadow 0.2s;
+    font-size: 1.75rem; 
+    line-height: 1; 
+    border: 2px solid var(--blk-contrast-shadow);
+    box-shadow: 4px 4px 0 var(--blk-contrast-shadow);
+    position: relative;
+    z-index: 2;
+}
+
+.cta-button:hover {
+    background-color: #ffc240;
+    transform: translate(-2px, -2px); 
+    box-shadow: 6px 6px 0 var(--blk-contrast-shadow);
+}
+
+/* --- Feature Grid (FIXED FOR 3 ITEMS) --- */
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on mobile */
+    gap: 0;
+    border-top: 2px solid var(--blk-contrast-shadow);
+    margin-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+    .feature-grid {
+        /* FIXED: 3 Columns for desktop so they fill width */
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.feature-block {
+    @apply blk-title-font;
+    background-color: var(--blk-primary-bg); 
+    min-height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    font-size: 1.25rem;
+    border-right: 2px solid var(--blk-contrast-shadow);
+    border-bottom: 4px solid var(--blk-accent);
+    color: var(--blk-text-dark);
+    transition: background-color 0.2s, border-color 0.2s, color 0.2s;
+    position: relative; 
+    z-index: 20; 
+}
+
+.feature-block:hover {
+    background-color: #f0eae4; 
+    border-color: var(--blk-contrast-shadow);
+    color: var(--blk-secondary-text);
+}
+
+/* Index Grid Borders Fix */
+@media (max-width: 767px) {
+    /* Mobile borders */
+    .feature-grid .feature-block:nth-child(even) { border-right: none; }
+    .feature-grid .feature-block:nth-child(3) {
+         border-top: 2px solid var(--blk-contrast-shadow);
+    }
+}
+@media (min-width: 768px) {
+    /* Desktop borders: Remove border on the last (3rd) item */
+    .feature-grid .feature-block:nth-child(3) { border-right: none; }
+}
+
+/* --- 4. GENERAL STYLES (About, Merch etc) --- */
+.about-content {
+    background-color: var(--blk-white);
+    padding: 2rem 1.5rem;
+    border: 2px solid var(--blk-contrast-shadow);
+    box-shadow: 8px 8px 0 var(--blk-contrast-shadow); 
+    position: relative;
+    z-index: 10;
+}
+@media (min-width: 768px) {
+    .about-content {
+        padding: 3rem 4rem;
+    }
+}
+
+.page-title {
+    font-size: 2.5rem;
+    letter-spacing: 0.08em;
+    line-height: 1.1;
+    border-bottom: 4px solid var(--blk-accent);
+    padding-bottom: 0.5rem;
+    margin-bottom: 2rem;
+    color: var(--blk-text-dark);
+}
+.merch-title {
+    text-shadow: 4px 4px 0 var(--blk-accent);
+}
+
+.section-heading {
+    @apply blk-title-font;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.story-section { margin-bottom: 2.5rem; }
+
+.body-text {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: var(--blk-secondary-text); 
+}
+
+.value-grid { display: grid; gap: 2rem; }
+@media (min-width: 768px) {
+    .value-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+.value-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Merch Grid */
+.merch-grid-section { padding: 1rem 0; }
+.merch-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding-top: 1rem;
+}
+.merch-card {
+    border: 2px solid var(--blk-contrast-shadow);
+    box-shadow: 6px 6px 0 var(--blk-contrast-shadow);
+    transition: transform 0.2s, box-shadow 0.2s;
+    overflow: hidden;
+    position: relative;
+}
+.merch-card:hover {
+    transform: translate(-4px, -4px);
+    box-shadow: 10px 10px 0 var(--blk-accent); 
+}
+.merch-image-placeholder {
+    height: 250px;
+    background-color: #ccc; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @apply blk-title-font;
+    font-size: 1.2rem;
+    letter-spacing: 0.1em;
+}
+.merch-info {
+    padding: 1rem;
+    background-color: var(--blk-primary-bg);
+    border-top: 2px solid var(--blk-contrast-shadow);
+}
+.merch-name { font-size: 1.4rem; margin-bottom: 0.25rem; line-height: 1.2; }
+.merch-description { font-size: 0.9rem; color: var(--blk-secondary-text); margin-bottom: 0.5rem; }
+.merch-price { font-size: 1.8rem; font-weight: 900; margin-bottom: 1rem; line-height: 1; }
+.merch-buy-button {
+    display: block;
+    text-align: center;
+    background-color: var(--blk-contrast-shadow);
+    color: var(--blk-accent);
+    padding: 0.75rem 0;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    transition: background-color 0.2s, color 0.2s;
+    border: 1px solid var(--blk-contrast-shadow);
+}
+.merch-buy-button:hover {
+    background-color: var(--blk-accent);
+    color: var(--blk-text-dark);
+}
+
+/* --- 5. FOOTER --- */
+.main-footer {
+    background-color: var(--blk-secondary-bg);
+    color: var(--blk-text-light);
+    margin-top: auto; 
+}
+
+.footer-content {
+    text-align: center;
+    padding: 1rem;
+}
+
+.main-footer h3 {
+    font-size: 0.8rem;
+    font-weight: 300;
+}
+
+/* --- 6. Responsive Adjustments --- */
+@media (min-width: 768px) {
+    .hero-title { font-size: 5rem; }
+    .page-title { font-size: 3.5rem; }
+}
+@media (max-width: 640px) {
+    .hero-title { font-size: 2.8rem; }
+    .cta-button { font-size: 1.5rem; padding: 0.75rem 2rem; }
+    .feature-block { font-size: 1rem; }
+    .main-nav ul { gap: 0.5rem; }
+    .page-title { font-size: 2rem; }
+    .section-heading { font-size: 1.5rem; }
+    .value-title { font-size: 1.25rem; }
+}
