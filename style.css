@@ -1,10 +1,12 @@
+
+
 /* 1. Root Variables & Global Reset */
 :root {
     /* --- LATTE COLOR PALETTE --- */
     --blk-primary-bg: #FAF7F3; /* Creamy Latte Base */
     --blk-secondary-bg: #3F2A1E; /* Rich Espresso Base */
     --blk-contrast-shadow: #24160E; /* Dark Roast */
-    --blk-accent: #fae2c8; /* Caramel/Honey */
+    --blk-accent: #ffebd4; /* Caramel/Honey */
     --blk-text-light: #FAF7F3; /* Cream Text */
     --blk-text-dark: #24160E; /* Dark Text */
     --blk-secondary-text: #5B3A29; /* Medium Brown */
@@ -110,7 +112,8 @@ a {
     justify-content: center;
     text-align: center;
     position: relative;
-
+    
+    /* IMAGE FIX: Ensure heroimage.png is in the same folder as style.css */
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('BG.png');
     background-size: cover;
     background-position: center;
@@ -119,13 +122,13 @@ a {
 
 .hero-title {
     @apply blk-title-font;
-    font-size: 0.1rem;
+    font-size: 3.8rem;
     letter-spacing: 0.15em;
-    line-height: 5rem; 
-    margin-bottom: 4rem;
+    line-height: 1.2;
+    margin-bottom: 2rem;
     text-shadow: 4px 4px 0 var(--blk-contrast-shadow);
     color: var(--blk-text-light); 
-    position: left;
+    position: relative;
     z-index: 2;
 }
 
@@ -258,58 +261,6 @@ a {
     margin-bottom: 0.5rem;
 }
 
-/* Merch Grid */
-.merch-grid-section { padding: 1rem 0; }
-.merch-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    padding-top: 1rem;
-}
-.merch-card {
-    border: 2px solid var(--blk-contrast-shadow);
-    box-shadow: 6px 6px 0 var(--blk-contrast-shadow);
-    transition: transform 0.2s, box-shadow 0.2s;
-    overflow: hidden;
-    position: relative;
-}
-.merch-card:hover {
-    transform: translate(-4px, -4px);
-    box-shadow: 10px 10px 0 var(--blk-accent); 
-}
-.merch-image-placeholder {
-    height: 250px;
-    background-color: #ccc; 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    @apply blk-title-font;
-    font-size: 1.2rem;
-    letter-spacing: 0.1em;
-}
-.merch-info {
-    padding: 1rem;
-    background-color: var(--blk-primary-bg);
-    border-top: 2px solid var(--blk-contrast-shadow);
-}
-.merch-name { font-size: 1.4rem; margin-bottom: 0.25rem; line-height: 1.2; }
-.merch-description { font-size: 0.9rem; color: var(--blk-secondary-text); margin-bottom: 0.5rem; }
-.merch-price { font-size: 1.8rem; font-weight: 900; margin-bottom: 1rem; line-height: 1; }
-.merch-buy-button {
-    display: block;
-    text-align: center;
-    background-color: var(--blk-contrast-shadow);
-    color: var(--blk-accent);
-    padding: 0.75rem 0;
-    font-weight: 700;
-    letter-spacing: 0.05em;
-    transition: background-color 0.2s, color 0.2s;
-    border: 1px solid var(--blk-contrast-shadow);
-}
-.merch-buy-button:hover {
-    background-color: var(--blk-accent);
-    color: var(--blk-text-dark);
-}
 
 /* --- 5. FOOTER --- */
 .main-footer {
@@ -328,7 +279,142 @@ a {
     font-weight: 300;
 }
 
-/* --- 6. Responsive Adjustments --- */
+/* --- 6. BRANCHES STYLES --- */
+.branches-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    gap: 1.5rem;
+}
+
+.branches-list li {
+    background-color: var(--blk-white);
+    padding: 1rem;
+    border-left: 5px solid var(--blk-accent); /* Nice orange bar on the left */
+    border-bottom: 1px solid var(--blk-contrast-shadow);
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--blk-text-dark);
+    transition: transform 0.2s;
+}
+
+.branches-list li:hover {
+    transform: translateX(5px);
+    background-color: #fff9f0;
+}
+
+/* --- MERCH & DROPS GRID (FIXED) --- */
+.merch-grid-section { 
+    padding: 1rem 0; 
+}
+
+/* 1. GRID LAYOUT FIX: Forces items into columns so they aren't super wide */
+.merch-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* 1 column on mobile */
+    gap: 2rem;
+    padding-top: 1rem;
+}
+
+/* Tablet: 2 Columns */
+@media (min-width: 640px) {
+    .merch-grid { 
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+/* Desktop: 4 Columns (Fixes the "huge image" issue) */
+@media (min-width: 1024px) {
+    .merch-grid { 
+        grid-template-columns: repeat(4, 1fr); 
+    }
+}
+
+.merch-card {
+    border: 2px solid var(--blk-contrast-shadow);
+    box-shadow: 6px 6px 0 var(--blk-contrast-shadow);
+    transition: transform 0.2s, box-shadow 0.2s;
+    overflow: hidden;
+    position: relative;
+    background-color: #fff;
+}
+
+.merch-card:hover {
+    transform: translate(-4px, -4px);
+    box-shadow: 10px 10px 0 var(--blk-accent); 
+}
+
+/* 2. IMAGE SIZING FIX: Ensures the full image is visible inside the box */
+.merch-image-placeholder {
+    height: 250px;
+    width: 100%;
+    background-color: #fff; /* White background behind the product */
+    
+    /* These 3 lines fix the zoom/cropping issue: */
+    background-size: contain;   /* Fit image inside box */
+    background-repeat: no-repeat; /* Don't tile the image */
+    background-position: center;  /* Center the image */
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    /* Font styles for text label if image fails */
+    font-family: 'Arial Black', Impact, sans-serif;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 1.2rem;
+    letter-spacing: 0.1em;
+}
+
+.merch-info {
+    padding: 1rem;
+    background-color: var(--blk-primary-bg);
+    border-top: 2px solid var(--blk-contrast-shadow);
+}
+
+.merch-name { 
+    font-size: 1.4rem; 
+    margin-bottom: 0.25rem; 
+    line-height: 1.2; 
+}
+/* --- BACK BUTTON STYLES --- */
+.back-button {
+    background: none;
+    border: none;
+    color: var(--blk-text-dark);
+    font-family: 'Arial Black', Impact, sans-serif;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 0;
+    margin-bottom: 1.5rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: color 0.2s, transform 0.2s;
+}
+
+.back-button:hover {
+    color: var(--blk-accent);
+    transform: translateX(-5px);
+}
+
+
+
+/* Layout for larger screens */
+@media (min-width: 768px) {
+    .branches-list {
+        grid-template-columns: repeat(2, 1fr); /* 2 Columns */
+    }
+}
+@media (min-width: 1024px) {
+    .branches-list {
+        grid-template-columns: repeat(3, 1fr); /* 3 Columns */
+    }
+}
+
+/* --- 7. Responsive Adjustments --- */
 @media (min-width: 768px) {
     .hero-title { font-size: 5rem; }
     .page-title { font-size: 3.5rem; }
