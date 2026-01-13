@@ -1,285 +1,139 @@
 
-
-/* 1. Root Variables & Global Reset */
-:root {
-    /* --- LATTE COLOR PALETTE --- */
-    --blk-primary-bg: #FAF7F3; /* Creamy Latte Base */
-    --blk-secondary-bg: #3F2A1E; /* Rich Espresso Base */
-    --blk-contrast-shadow: #24160E; /* Dark Roast */
-    --blk-accent: #ffebd4; /* Caramel/Honey */
-    --blk-text-light: #FAF7F3; /* Cream Text */
-    --blk-text-dark: #24160E; /* Dark Text */
-    --blk-secondary-text: #5B3A29; /* Medium Brown */
-    
-    /* Layout Variables */
-    --max-width: 1400px;
-}
-
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
 }
 
 body {
-    background-color: var(--blk-primary-bg);
-    color: var(--blk-text-dark);
-    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+    background-color: #000000;
+    color: #fff;
     line-height: 1.6;
-    text-transform: none;
-}
-
-.blk-title-font {
-    font-family: 'Arial Black', Impact, sans-serif;
-    text-transform: uppercase;
-    font-weight: 900;
-}
-.accent-color { color: var(--blk-accent); }
-.secondary-color { color: var(--blk-secondary-text); }
-
-a {
-    text-decoration: none;
-    color: inherit;
-    position: relative; 
-    z-index: 50; 
 }
 
 .container {
-    width: 100%;
-    max-width: var(--max-width);
+    width: 90%;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 0 1rem;
 }
 
-
-/* --- 2. HEADER & NAVIGATION --- */
+/* Header & Nav */
 .main-header {
-    background-color: var(--blk-secondary-bg);
-    color: var(--blk-text-light);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    position: sticky;
-    top: 0;
-    z-index: 100; 
+    padding: 2rem 0;
+    border-bottom: 1px solid #333;
 }
 
 .header-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 1rem;
 }
 
 .logo {
-    @apply blk-title-font;
-    font-size: 2rem;
-    letter-spacing: 0.2em;
+    font-size: 2.5rem;
+    letter-spacing: 5px;
+    font-weight: 900;
 }
 
 .main-nav ul {
-    list-style: none;
     display: flex;
-    gap: 1.5rem;
+    list-style: none;
 }
 
 .nav-link {
-    @apply blk-title-font;
-    font-size: 1rem;
-    font-weight: 600;
-    padding: 0.5rem 0.25rem;
-    transition: color 0.2s;
+    color: #fff;
+    text-decoration: none;
+    margin-left: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9rem;
 }
 
-.nav-link:hover, .current-page {
-    color: var(--blk-accent);
-}
-
-/* --- 3. MAIN CONTENT --- */
-.main-content {
-    flex-grow: 1;
-    padding: 3rem 0;
-}
-
-/* Index Hero */
+/* Hero Section */
 .hero-section {
-    min-height: 60vh;
-    background-color: var(--blk-secondary-bg);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    position: relative;
-    
-    /* IMAGE FIX: Ensure heroimage.png is in the same folder as style.css */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('BG.png');
-    background-size: cover;
-    background-position: center;
-    margin-bottom: 2rem;
+    padding: 100px 0;
+    text-align: left;
 }
 
 .hero-title {
-    @apply blk-title-font;
-    font-size: 3.8rem;
-    letter-spacing: 0.15em;
-    line-height: 1.2;
-    margin-bottom: 2rem;
-    text-shadow: 4px 4px 0 var(--blk-contrast-shadow);
-    color: var(--blk-text-light); 
-    position: relative;
-    z-index: 2;
+    font-size: 4rem;
+    line-height: 1.1;
+    letter-spacing: -2px;
 }
 
 .cta-button {
-    @apply blk-title-font;
-    background-color: var(--blk-accent);
-    color: var(--blk-text-dark);
-    font-weight: 900;
-    letter-spacing: 0.1em;
-    padding: 1rem 3rem;
-    border-radius: 0.5rem;
-    transition: background-color 0.2s, transform 0.2s, box-shadow 0.2s;
-    font-size: 1.75rem; 
-    line-height: 1; 
-    border: 2px solid var(--blk-contrast-shadow);
-    box-shadow: 4px 4px 0 var(--blk-contrast-shadow);
+    display: inline-block;
+    background: #fff;
+    color: #000;
+    padding: 1rem 2.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+
+.cta-button:hover {
+    background: #ccc;
+}
+
+/* Video Section */
+.feature-block {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    background: #111;
+}
+
+.bg-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    opacity: 0.6;
+    display: block;
+}
+
+.video-content {
     position: relative;
     z-index: 2;
 }
 
-.cta-button:hover {
-    background-color: #ffc240;
-    transform: translate(-2px, -2px); 
-    box-shadow: 6px 6px 0 var(--blk-contrast-shadow);
+.view-menu-btn {
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    font-weight: bold;
 }
 
-/* --- Feature Grid (FIXED FOR 3 ITEMS) --- */
+/* Feature Grid */
 .feature-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 columns on mobile */
-    gap: 0;
-    border-top: 2px solid var(--blk-contrast-shadow);
-    margin-bottom: 3rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+    padding-bottom: 100px;
 }
 
-@media (min-width: 768px) {
-    .feature-grid {
-        /* FIXED: 3 Columns for desktop so they fill width */
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-.feature-block {
-    @apply blk-title-font;
-    background-color: var(--blk-primary-bg); 
-    min-height: 180px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    font-weight: 800;
-    letter-spacing: 0.1em;
-    font-size: 1.25rem;
-    border-right: 2px solid var(--blk-contrast-shadow);
-    border-bottom: 4px solid var(--blk-accent);
-    color: var(--blk-text-dark);
-    transition: background-color 0.2s, border-color 0.2s, color 0.2s;
-    position: relative; 
-    z-index: 20; 
-}
-
-.feature-block:hover {
-    background-color: #f0eae4; 
-    border-color: var(--blk-contrast-shadow);
-    color: var(--blk-secondary-text);
-}
-
-/* Index Grid Borders Fix */
-@media (max-width: 767px) {
-    /* Mobile borders */
-    .feature-grid .feature-block:nth-child(even) { border-right: none; }
-    .feature-grid .feature-block:nth-child(3) {
-         border-top: 2px solid var(--blk-contrast-shadow);
-    }
-}
-@media (min-width: 768px) {
-    /* Desktop borders: Remove border on the last (3rd) item */
-    .feature-grid .feature-block:nth-child(3) { border-right: none; }
-}
-
-/* --- 4. GENERAL STYLES (About, Merch etc) --- */
-.about-content {
-    background-color: var(--blk-white);
-    padding: 2rem 1.5rem;
-    border: 2px solid var(--blk-contrast-shadow);
-    box-shadow: 8px 8px 0 var(--blk-contrast-shadow); 
-    position: relative;
-    z-index: 10;
-}
-@media (min-width: 768px) {
-    .about-content {
-        padding: 3rem 4rem;
-    }
-}
-
-.page-title {
-    font-size: 2.5rem;
-    letter-spacing: 0.08em;
-    line-height: 1.1;
-    border-bottom: 4px solid var(--blk-accent);
-    padding-bottom: 0.5rem;
-    margin-bottom: 2rem;
-    color: var(--blk-text-dark);
-}
-.merch-title {
-    text-shadow: 4px 4px 0 var(--blk-accent);
-}
-
-.section-heading {
-    @apply blk-title-font;
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-}
-
-.story-section { margin-bottom: 2.5rem; }
-
-.body-text {
-    font-size: 1rem;
-    margin-bottom: 1rem;
-    color: var(--blk-secondary-text); 
-}
-
-.value-grid { display: grid; gap: 2rem; }
-@media (min-width: 768px) {
-    .value-grid { grid-template-columns: repeat(2, 1fr); }
-}
-
-.value-title {
+.feature-grid .feature-block {
+    text-decoration: none;
+    color: #fff;
     font-size: 1.5rem;
-    margin-bottom: 0.5rem;
+    font-weight: bold;
+    border: 1px solid #333;
+    transition: 0.3s;
 }
-
-
-/* --- 5. FOOTER --- */
-.main-footer {
-    background-color: var(--blk-secondary-bg);
-    color: var(--blk-text-light);
-    margin-top: auto; 
-}
-
-.footer-content {
-    text-align: center;
-    padding: 1rem;
-}
-
-.main-footer h3 {
-    font-size: 0.8rem;
-    font-weight: 300;
-}
-
-/* --- 6. BRANCHES STYLES --- */
+/* branches */
 .branches-list {
     list-style: none;
     padding: 0;
@@ -303,70 +157,6 @@ a {
     background-color: #fff9f0;
 }
 
-/* --- MERCH & DROPS GRID (FIXED) --- */
-.merch-grid-section { 
-    padding: 1rem 0; 
-}
-
-/* 1. GRID LAYOUT FIX: Forces items into columns so they aren't super wide */
-.merch-grid {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr); /* 1 column on mobile */
-    gap: 2rem;
-    padding-top: 1rem;
-}
-
-/* Tablet: 2 Columns */
-@media (min-width: 640px) {
-    .merch-grid { 
-        grid-template-columns: repeat(2, 1fr); 
-    }
-}
-
-/* Desktop: 4 Columns (Fixes the "huge image" issue) */
-@media (min-width: 1024px) {
-    .merch-grid { 
-        grid-template-columns: repeat(4, 1fr); 
-    }
-}
-
-.merch-card {
-    border: 2px solid var(--blk-contrast-shadow);
-    box-shadow: 6px 6px 0 var(--blk-contrast-shadow);
-    transition: transform 0.2s, box-shadow 0.2s;
-    overflow: hidden;
-    position: relative;
-    background-color: #fff;
-}
-
-.merch-card:hover {
-    transform: translate(-4px, -4px);
-    box-shadow: 10px 10px 0 var(--blk-accent); 
-}
-
-/* 2. IMAGE SIZING FIX: Ensures the full image is visible inside the box */
-.merch-image-placeholder {
-    height: 250px;
-    width: 100%;
-    background-color: #fff; /* White background behind the product */
-    
-    /* These 3 lines fix the zoom/cropping issue: */
-    background-size: contain;   /* Fit image inside box */
-    background-repeat: no-repeat; /* Don't tile the image */
-    background-position: center;  /* Center the image */
-    
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-    /* Font styles for text label if image fails */
-    font-family: 'Arial Black', Impact, sans-serif;
-    text-transform: uppercase;
-    font-weight: 900;
-    font-size: 1.2rem;
-    letter-spacing: 0.1em;
-}
-
 .merch-info {
     padding: 1rem;
     background-color: var(--blk-primary-bg);
@@ -378,7 +168,7 @@ a {
     margin-bottom: 0.25rem; 
     line-height: 1.2; 
 }
-/* --- BACK BUTTON STYLES --- */
+/* Back Buttons */
 .back-button {
     background: none;
     border: none;
@@ -401,30 +191,9 @@ a {
 }
 
 
-
-/* Layout for larger screens */
-@media (min-width: 768px) {
-    .branches-list {
-        grid-template-columns: repeat(2, 1fr); /* 2 Columns */
-    }
-}
-@media (min-width: 1024px) {
-    .branches-list {
-        grid-template-columns: repeat(3, 1fr); /* 3 Columns */
-    }
-}
-
-/* --- 7. Responsive Adjustments --- */
-@media (min-width: 768px) {
-    .hero-title { font-size: 5rem; }
-    .page-title { font-size: 3.5rem; }
-}
-@media (max-width: 640px) {
-    .hero-title { font-size: 2.8rem; }
-    .cta-button { font-size: 1.5rem; padding: 0.75rem 2rem; }
-    .feature-block { font-size: 1rem; }
-    .main-nav ul { gap: 0.5rem; }
-    .page-title { font-size: 2rem; }
-    .section-heading { font-size: 1.5rem; }
-    .value-title { font-size: 1.25rem; }
+/* Footer */
+.main-footer {
+    padding: 50px 0;
+    border-top: 1px solid #333;
+    text-align: center;
 }
