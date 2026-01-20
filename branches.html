@@ -7,15 +7,16 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <header class="main-header">
         <div class="container header-content">
-            <h1 class="logo">BLK</h1>
-
+            <a href="index.html" class="logo-link">
+                <img src="logo.png" alt="BLK Coffee Logo" class="main-logo">
+            </a>
             <nav class="main-nav">
                 <ul>
-                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="index.html" class="nav-link current-page">Home</a></li>
                     <li><a href="about.html" class="nav-link">About Us</a></li>
-            
                 </ul>
             </nav>
         </div>
@@ -23,71 +24,46 @@
 
     <main class="main-content">
         <div class="container">
-            
-            <!-- Hero Section -->
-            <section class="hero-section" style="
-                background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('branches-hero.png');
-                background-size: cover;
-                background-position: center;
-            ">
-                <h2 class="hero-title">
-                    FIND YOUR<br>NEAREST BLK
-                </h2>
-      
+            <section class="hero-section" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('branches-hero.png'); background-size: cover; background-position: center;">
+                <h2 class="hero-title">FIND YOUR<br>NEAREST BLK</h2>
             </section>
-
-            <!-- Branches List Section -->
-            <section class="branches-content" style="margin-top: 0.1rem; margin-bottom: 0.1rem;">
-                <h1 class="page-title blk-title-font" style="text-align: center;">
-                    Locations <span style="font-weight: 400;">
-                </h1>
-
-                <ul class="branches-list">
-                    <li>Autostrad Zarqa</li>
-                    <li>Al Yasmeen (5B Mall)</li>
-                    <li>Khalda</li>
-                    <li>7th Circle</li>
-                    <li>Sports City</li>
-                    <li>Abdoun</li>
-                    <li>Boulevard</li>
-                    <li>Fuhais</li>
-                    <li>Kia Showroom</li>
-                    <li>New Zarqa</li>
-                    <li>Abdoun Circle</li>
-                    <li>Sweifeyeh</li>
-                    <li>Irbid - Abu Rashid St.</li>
-                    <li>Ahliyyah Amman University</li>
-                    <li>JUST University</li>
-                    <li>University of Jordan - Clock Tower</li>
-                    <li>University of Jordan - Medicine</li>
-                    <li>University Street 1</li>
-                    <li>University Street 2</li>
-                    <li>Hashemite University</li>
-                    <li>Hashemite University 2</li>
-                    <li>Airport Arrivals</li>
-                    <li>Al Bayader</li>
-                    <li>Total Esra'a - Airport Street</li>
-                    <li>Al Hurriyah Street - Muqabalain</li>
-                    <li>HQ - Training</li>
-                    <li>Total - Wadi Saqra</li>
-                    <li>Petra</li>
-                </ul>
-                <br>
-                
-
-                       <button onclick="history.back()" class="back-button">
-    &larr; BACK
-</button>
-
-            </section>
-
+           <section class="branches-content">
+    <div class="container">
+        <h1 class="locations-title">Locations</h1>
+        
+        <div class="branches-grid">
+            <a href="https://www.google.com/maps/place/Qahwa+BLK+-+Autostrad/@32.0416715,36.0938146,17z/data=!3m1!4b1!4m6!3m5!1s0x151b6582497a1447:0xb9cb6b226430a94d!8m2!3d32.0416715!4d36.0938146!16s%2Fg%2F11vyry_yf8!5m1!1e1?entry=ttu&g_ep=EgoyMDI2MDExMy4wIKXMDSoKLDEwMDc5MjA3M0gBUAM%3D" target="_blank">Autostrad Zarqa</a>
+            <a href="https://www.google.com/maps/place/Qahwa+BLK+-+Al+Yasmin+%7C+%D9%82%D9%87%D9%88%D8%A9+%D8%A8%D9%84%D8%A7%D9%83+-+%D8%A7%D9%84%D9%8A%D8%A7%D8%B3%D9%85%D9%8A%D9%86%E2%80%AD/@31.9187127,35.9060402,17z/data=!3m1!4b1!4m6!3m5!1s0x151ca1a6fc038aab:0x64777918d0550a31!8m2!3d31.9187127!4d35.9060402!16s%2Fg%2F11vjx5q4r8!5m1!1e1?entry=ttu&g_ep=EgoyMDI2MDExMy4wIKXMDSoKLDEwMDc5MjA3M0gBUAM%3D" target="_blank">Al Yasmeen (5B Mall)</a>
+            <a href="https://www.google.com/maps/place/Qahwa+BLK+-+Khalda+Branch+%7C+%D9%82%D9%87%D9%88%D8%A9+%D8%A8%D9%84%D8%A7%D9%83+-+%D8%AE%D9%84%D8%AF%D8%A7%E2%80%AD/@31.9972124,35.7696493,13z/data=!4m6!3m5!1s0x151ca1052d9f57ab:0x6ab81fd754369455!8m2!3d31.9973252!4d35.8458892!16s%2Fg%2F11sv_yhmct!5m1!1e1?coh=277533&entry=tts&g_ep=EgoyMDI1MTIwOS4wIPu8ASoKLDEwMDc5MjA2OUgBUAM%3D&skid=696c1713-91b2-4d98-93b1-a2f7ab473110" target="_blank">Khalda</a>
+            <a href="https://www.google.com/maps/place/Qahwa+BLK+-+7th+Circle+%7C+%D9%82%D9%87%D9%88%D8%A9+%D8%A8%D9%84%D8%A7%D9%83+-+%D8%A7%D9%84%D8%B3%D8%A7%D8%A8%D8%B9%E2%80%AD/@31.9550758,35.8548038,17z/data=!3m1!4b1!4m6!3m5!1s0x151ca1f9513e3075:0xf8ef4072a9a8b00a!8m2!3d31.9550758!4d35.8548038!16s%2Fg%2F11twstjhn2!5m1!1e1?coh=277533&entry=tts&g_ep=EgoyMDI1MTIwOS4wIPu8ASoKLDEwMDc5MjA2OUgBUAM%3D&skid=5d9fb44c-edc8-46e8-9656-01f14422515b" target="_blank">7th Circle</a>
+            <a href="https://www.google.com/maps/place/Qahwa+BLK/@31.9900024,35.908364,17z/data=!4m6!3m5!1s0x151c9f09bace8f19:0x1f203303974302aa!8m2!3d31.9899322!4d35.9099925!16s%2Fg%2F11qb8y2d0h!5m1!1e1?coh=277533&entry=tts&g_ep=EgoyMDI1MTIwOS4wIPu8ASoKLDEwMDc5MjA2OUgBUAM%3D&skid=433091bd-a4ff-4988-a176-63dc654e6e0c" target="_blank">Sports City</a>
+            <a href="google.com/maps/place/Qahwa+BLK+-+Abdoun+%7C+قهوة+بلاك+-+عبدون%E2%80%AD/@31.9467817,35.8789823,17z/data=!3m1!4b1!4m6!3m5!1s0x151ca1293a66dd07:0xa553cbdaaa325b76!8m2!3d31.9467817!4d35.8789823!16s%2Fg%2F11fn90vbsf!5m1!1e1?coh=277533&entry=tts&g_ep=EgoyMDI1MTIwOS4wIPu8ASoKLDEwMDc5MjA2OUgBUAM%3D&skid=ef2123dc-84a9-4605-9d66-8b260c647ce8" target="_blank">Abdoun</a>
+            <a href="https://www.google.com/maps/place/Qahwa+BLK+-+Abdali+Boulevard+%7C+%D9%82%D9%87%D9%88%D8%A9+%D8%A8%D9%84%D8%A7%D9%83+-+%D8%A8%D9%88%D9%84%D9%8A%D9%81%D8%A7%D8%B1%D8%AF+%D8%A7%D9%84%D8%B9%D8%A8%D8%AF%D9%84%D9%8A%E2%80%AD/@31.9642652,35.9052932,17z/data=!3m1!4b1!4m6!3m5!1s0x151ca121f216474d:0x9e308abf951393b4!8m2!3d31.9642652!4d35.9052932!16s%2Fg%2F11q1trvx3n!5m1!1e1?entry=ttu&g_ep=EgoyMDI2MDExMy4wIKXMDSoKLDEwMDc5MjA3M0gBUAM%3D" target="_blank">Boulevard</a>
+            <a href="https://www.google.com/maps/place/QahwaBLK+Fuhais+-+%D9%82%D9%87%D9%88%D8%A9+%D8%A8%D9%84%D8%A7%D9%83+%D9%81%D8%B1%D8%B9+%D8%A7%D9%84%D9%81%D8%AD%D9%8A%D8%B5%E2%80%AD/@32.0015688,35.7793565,17z/data=!3m1!4b1!4m5!3m4!1s0x151ca3c4e4755081:0xdf5106ae3e5f6457!8m2!3d32.0015688!4d35.7815452?shorturl=1" target="_blank">Fuhais</a>
+            <a href="google.com/maps/place/Qahwa+BLK+-+Kia+Showroom+%7C+قهوة+بلاك+-+كيا+موتورز%E2%80%AD/@31.9433179,35.8481131,17z/data=!3m1!4b1!4m5!3m4!1s0x151ca1c6210dd09f:0xfd62caa154f79a34!8m2!3d31.9433179!4d35.8481131?coh=164777&entry=tt&shorturl=1" target="_blank">Kia Showroom</a>
+            <a href="https://www.google.com/maps/place/Qahwa+BLK+-+New+Zarqa/@32.0971875,36.0873125,17z/data=!3m1!4b1!4m6!3m5!1s0x151b7b111f2eca7f:0x556673d776facec4!8m2!3d32.0971875!4d36.0873125!16s%2Fg%2F11sd50dsgq!5m1!1e1?entry=ttu&g_ep=EgoyMDI2MDExMy4wIKXMDSoKLDEwMDc5MjA3M0gBUAM%3D" target="_blank">New Zarqa</a>
+            <a href="http://google.com/maps?q=WVXR+HJX+Qahwa+BLK+-+Abdoun+Circle+%7C+%D9%82%D9%87%D9%88%D8%A9+%D8%A8%D9%84%D8%A7%D9%83+-+%D8%AF%D9%88%D8%A7%D8%B1+%D8%B9%D8%A8%D8%AF%D9%88%D9%86,+Amman&ftid=0x151ca1667c9f0f27:0x2679fc22d2a7703a&entry=gps&lucs=,94242529,94224825,94227247,94227248,47071704,47069508,94218641,94203019,47084304,94208458,94208447&g_ep=CAISDTYuMTM1LjEuODcwOTAYACCs3wEqYyw5NDI0MjUyOSw5NDIyNDgyNSw5NDIyNzI0Nyw5NDIyNzI0OCw0NzA3MTcwNCw0NzA2OTUwOCw5NDIxODY0MSw5NDIwMzAxOSw0NzA4NDMwNCw5NDIwODQ1OCw5NDIwODQ0N0ICSk8%3D&g_st=iw&g_st=iw" target="_blank">Abdoun Circle</a>
+            <a href="https://www.google.com/maps?q=Qahwa+BLK+-+Swefieh+%7C+%D9%82%D9%87%D9%88%D8%A9+%D8%A8%D9%84%D8%A7%D9%83+%D9%81%D8%B1%D8%B9+%D8%B5%D9%88%D9%8A%D9%81%D9%8A%D8%A9,+Youssef+Al-Farra+St.,+Amman&ftid=0x151ca170e79f0c6b:0x7c4065712cf5dc00&entry=gps&lucs=,94242529,94224825,94227247,94227248,47071704,47069508,94218641,94203019,47084304,94208458,94208447&g_ep=CAISDTYuMTM1LjEuODcwOTAYACCs3wEqYyw5NDI0MjUyOSw5NDIyNDgyNSw5NDIyNzI0Nyw5NDIyNzI0OCw0NzA3MTcwNCw0NzA2OTUwOCw5NDIxODY0MSw5NDIwMzAxOSw0NzA4NDMwNCw5NDIwODQ1OCw5NDIwODQ0N0ICSk8%3D&g_st=iw&g_st=iw" target="_blank">Sweifeyeh</a>
+            <a href="https://www.google.com/maps?q=Qahwa+BLK+-+Irbid+Wasfi+Al-Tal+St.+-+(%D8%B4%D8%A7%D8%B1%D8%B9+%D8%A7%D8%A8%D9%88+%D8%B1%D8%A7%D8%B4%D8%AF)+%D9%82%D9%87%D9%88%D8%A9+%D8%A8%D9%84%D8%A7%D9%83+-+%D8%A5%D8%B1%D8%A8%D8%AF+%D8%B4.+%D9%88%D8%B5%D9%81%D9%8A+%D8%A7%D9%84%D8%AA%D9%84,+Wasfi+At-Tal+St.,+Irbid&ftid=0x151c77f06280723d:0xc4dc11743b08062c&entry=gps&lucs=,94242529,94224825,94227247,94227248,47071704,47069508,94218641,94203019,47084304,94208458,94208447&g_ep=CAISDTYuMTM5LjAuOTA4MzAYACCs3wEqYyw5NDI0MjUyOSw5NDIyNDgyNSw5NDIyNzI0Nyw5NDIyNzI0OCw0NzA3MTcwNCw0NzA2OTUwOCw5NDIxODY0MSw5NDIwMzAxOSw0NzA4NDMwNCw5NDIwODQ1OCw5NDIwODQ0N0ICSk8%3D&g_st=com.google.maps.preview.copy&g_st=com.google.maps.preview.copy" target="_blank">Irbid - Abu Rashid St.</a>
+            <a href="https://www.google.com/maps?q=Qahwa+BLK+-+Ahliyeh+University+%7C+%D9%82%D9%87%D9%88%D8%A9+%D8%A8%D9%84%D8%A7%D9%83+%D8%AC%D8%A7%D9%85%D8%B9%D8%A9+%D8%B9%D9%85%D8%A7%D9%86+%D8%A7%D9%84%D8%A3%D9%87%D9%84%D9%8A%D8%A9,+Amman+25989&ftid=0x151c9924d49cb433:0xf7896902a3f06950&entry=gps&lucs=,94242529,94224825,94227247,94227248,47071704,47069508,94218641,94203019,47084304,94208458,94208447&g_ep=CAISDTYuMTM1LjEuODcwOTAYACCs3wEqYyw5NDI0MjUyOSw5NDIyNDgyNSw5NDIyNzI0Nyw5NDIyNzI0OCw0NzA3MTcwNCw0NzA2OTUwOCw5NDIxODY0MSw5NDIwMzAxOSw0NzA4NDMwNCw5NDIwODQ1OCw5NDIwODQ0N0ICSk8%3D&g_st=com.google.maps.preview.copy&g_st=com.google.maps.preview.copy" target="_blank">Ahliyyah Amman University</a>
+            <a href="https://www.google.com/maps/place/Qahwa+BLK+-+JUST+University/@32.4924327,35.989661,17z/data=!3m1!4b1!4m6!3m5!1s0x151b890078636f8d:0xdd1bbec3cdc4af65!8m2!3d32.4924327!4d35.989661!16s%2Fg%2F11wjn1fq58!5m1!1e1?entry=ttu&g_ep=EgoyMDI2MDExMy4wIKXMDSoKLDEwMDc5MjA3M0gBUAM%3D" target="_blank">JUST University</a>
+            <a href="https://www.google.com/maps/place/Qahwa+BLK+-+Jordan+University+(Clock+Tower)/@31.8990312,35.752499,11z/data=!4m6!3m5!1s0x151c9f007f0179d7:0xcb6b972cea9dc5d5!8m2!3d32.0163361!4d35.8713359!16s%2Fg%2F11wx8dr8t6!5m1!1e1?entry=ttu&g_ep=EgoyMDI2MDExMy4wIKXMDSoKLDEwMDc5MjA3M0gBUAM%3D" target="_blank">University of Jordan - Clock Tower</a>
+            <a href="https://www.google.com/maps/place/32%C2%B000'33.0%22N+35%C2%B052'27.9%22E/@32.0091667,35.8718418,17z/data=!3m1!4b1!4m4!3m3!8m2!3d32.0091667!4d35.8744167!5m1!1e1?entry=tts&g_ep=EgoyMDI1MDYyMi4wIPu8ASoASAFQAw%3D%3D&skid=d6fec096-042b-444e-945e-78ffe952bb17" target="_blank">University of Jordan - Medicine</a>
+            <a href="google.com/maps/place/Qahwa+BLK+-+University+1+%7C+1+قهوة+بلاك+-+الجامعة%E2%80%AD/@31.9982996,35.8785775,17z/data=!3m1!4b1!4m6!3m5!1s0x151ca1007bcb66f1:0x73767f7988ee57c4!8m2!3d31.9982951!4d35.8811524!16s%2Fg%2F11wmys2_bm?entry=tts&g_ep=EgoyMDI0MTIxMS4wIPu8ASoASAFQAw%3D%3D" target="_blank">University Street 1</a>
+            <a href="https://www.google.com/maps/place/Qahwa+BLK+-+University+2+%7C+%D9%82%D9%87%D9%88%D8%A9+%D8%A8%D9%84%D8%A7%D9%83+-+%D8%A7%D9%84%D8%AC%D8%A7%D9%85%D8%B9%D8%A9+%D9%A2%E2%80%AD/@32.0006999,35.8745958,17z/data=!3m1!4b1!4m6!3m5!1s0x151c9f121d0e9f61:0x98c3d2cafe4a9f61!8m2!3d32.0006999!4d35.8771707!16s%2Fg%2F11wnn0lprb?entry=tts&g_ep=EgoyMDI1MDEyOS4xIPu8ASoASAFQAw%3D%3D" target="_blank">University Street 2</a>
+            <a href="http://google.com/maps/place/Qahwa+BLK+-+Hashemite+University+(Western)+Branch/@32.1052405,36.1868629,17z/data=!3m1!4b1!4m6!3m5!1s0x151b73f814a242c9:0xa24fd2526b3a7004!8m2!3d32.1052405!4d36.1868629!16s%2Fg%2F11x6f8d9hb!5m1!1e1?entry=tts&g_ep=EgoyMDI1MDYyMi4wIPu8ASoASAFQAw%3D%3D&skid=094ff297-e3f5-42a3-b1ff-0296741b0074" target="_blank">Hashemite University</a>
+            <a href="https://www.google.com/maps/search/32.103579,+36.187076?entry=tts&g_ep=EgoyMDI1MDYyMi4wIPu8ASoASAFQAw%3D%3D&skid=ffd83c5d-11b0-4d84-a98a-cd603dee6dda" target="_blank">Hashemite University 2</a>
+            <a href="https://www.google.com/maps/place/Qahwa+BLK+-+Arrivals/@31.8328858,35.9170683,11z/data=!4m7!3m6!1s0x151b55a716cfe27b:0xabbc2de35cc3092!8m2!3d31.7224537!4d35.9860236!15sChFxYWh3YSBibGsgYWlycG9ydFoTIhFxYWh3YSBibGsgYWlycG9ydJIBC2NvZmZlZV9zaG9wqgFWCg0vZy8xMWZuOTB2YnNmEAEqCyIHYWlycG9ydCgAMh8QASIbjyIofMtsp-A38f72aUoAjwZdr7HcG3r4oTpdMhUQAiIRcWFod2EgYmxrIGFpcnBvcnTgAQA!16s%2Fg%2F11lz7qlsfw!5m1!1e1?entry=tts&g_ep=EgoyMDI1MDYyMi4wIPu8ASoASAFQAw%3D%3D&skid=7eecc7ee-579e-497e-81b4-ccc4ef392023" target="_blank">Airport Arrivals</a>
+            <a href="https://www.google.com/maps/place/Qahwa+BLK+-+AL+Bayader+%7C+%D9%82%D9%87%D9%88%D8%A9+%D8%A8%D9%84%D8%A7%D9%83+-+%D8%A7%D9%84%D8%A8%D9%8A%D8%A7%D8%AF%D8%B1%E2%80%AD/@31.9548029,35.8350494,17z/data=!3m1!4b1!4m6!3m5!1s0x151ca1004682fc61:0x9bcc93474faa3a2f!8m2!3d31.9548029!4d35.8350494!16s%2Fg%2F11wx30l3lb?sa=X&ved=1t:2428&ictx=111&entry=tts&g_ep=EgoyMDI1MDEyOS4xIPu8ASoASAFQAw%3D%3D" target="_blank">Al Bayader</a>
+            <a href="https://www.google.com/maps/place/Qahwa+BLK/@31.8052504,35.9125172,21z/data=!4m6!3m5!1s0x151ca90071092b95:0xfc624c0c3f29bc0a!8m2!3d31.8052504!4d35.9126584!16s%2Fg%2F11x696vy9m!5m1!1e1?entry=tts&g_ep=EgoyMDI1MDYyMi4wIPu8ASoASAFQAw%3D%3D&skid=6b32f02f-c4ea-4540-af4b-67c20a25cc5a" target="_blank">Total Esra'a - Airport Street</a>
+            <a href="https://www.google.com/maps/place/Qahwa+BLK+-+AlHurriyeh+Street+%7C+%D9%82%D9%87%D9%88%D8%A9+%D8%A8%D9%84%D8%A7%D9%83+-+%D8%B4%D8%A7%D8%B1%D8%B9+%D8%A7%D9%84%D8%AD%D8%B1%D9%8A%D8%A9%E2%80%AD/@31.8961416,35.915784,18z/data=!4m6!3m5!1s0x151b59003a7e716d:0x729c5b422a2373ce!8m2!3d31.8961143!4d35.9163519!16s%2Fg%2F11xd04tftp!5m1!1e1?entry=tts&g_ep=EgoyMDI1MDYyMi4wIPu8ASoASAFQAw%3D%3D&skid=5a4600df-f260-4be2-9ac0-5194f5af943a" target="_blank">Al Hurriyah Street - Muqabalain</a>
+            <a href="https://www.google.com/maps/place/Qahwa+BLK+-+Training+Branch+%7C+%D9%82%D9%87%D9%88%D8%A9+%D8%A8%D9%84%D8%A7%D9%83+-+%D9%81%D8%B1%D8%B9+%D8%A7%D9%84%D8%AA%D8%AF%D8%B1%D9%8A%D8%A8%E2%80%AD/@31.955523,35.8767735,15z/data=!4m7!3m6!1s0x151ca11e5a0f2ce7:0x69d3f6c999f6993f!8m2!3d31.9580057!4d35.9086648!15sChFxYWh3YWJsayB0cmFpbmluZ1oTIhFxYWh3YWJsayB0cmFpbmluZ5IBC2NvZmZlZV9zaG9wmgEjQ2haRFNVaE5NRzluUzBWSlEwRm5UVU5STUhCTE1FTlJFQUWqAWIKDS9nLzExcTF0cnZ4M24KCS9tLzAxNGpnMxABKgwiCHRyYWluaW5nKAAyHxABIhu8ixJuVA_o8PfLg694u1jqMbW02G4wVBhMEREyFRACIhFxYWh3YWJsayB0cmFpbmluZ-ABAPoBBAgAEC0!16s%2Fg%2F11yc10qsy1!5m1!1e1?entry=tts&g_ep=EgoyMDI1MDUxNS4wIPu8ASoASAFQAw%3D%3D&skid=a524b24a-d49a-4904-897f-427a5a6fdc18" target="_blank">HQ - Training</a>
+            <a href="https://www.google.com/maps/place/Qahwa+BLK+-+Wadi+Saqra+%7C+%D9%82%D9%87%D9%88%D8%A9+%D8%A8%D9%84%D8%A7%D9%83+-+%D9%88%D8%A7%D8%AF%D9%8A+%D8%B5%D9%82%D8%B1%D8%A9%E2%80%AD/@32.0210432,35.7274066,12z/data=!4m7!3m6!1s0x151ca1001432ad01:0x72712dcf6252e1a6!8m2!3d31.9623468!4d35.890157!15sChpRYWh3YSBibGsgdG90YWwgd2FkaSBzYXFyYVocIhpxYWh3YSBibGsgdG90YWwgd2FkaSBzYXFyYZIBC2NvZmZlZV9zaG9wqgFeCg0vZy8xMXExdHJ2eDNuCgsvZy8xdGQycjc2cRABMh4QASIauARGo1IE85CHYNFdrUJofehHgik3ZQhJA0IyHhACIhpxYWh3YSBibGsgdG90YWwgd2FkaSBzYXFyYeABAA!16s%2Fg%2F11x7xl41qc!5m1!1e1?entry=tts&g_ep=EgoyMDI1MDYyMi4wIPu8ASoASAFQAw%3D%3D&skid=cb6cc210-4946-4589-818f-dcb7bbd11c67" target="_blank">Total - Wadi Saqra</a>
+            <a href="https://www.google.com/maps/place/Qahwa+BLK+-+Petra/@30.3251244,35.4686545,17z/data=!3m1!4b1!4m6!3m5!1s0x15016fd6552a6301:0x52408538201ede98!8m2!3d30.3251244!4d35.4686545!16s%2Fg%2F11xvbdl95p!5m1!1e1?coh=277533&entry=tts&g_ep=EgoyMDI1MTIwOS4wIPu8ASoKLDEwMDc5MjA2OUgBUAM%3D&skid=e06a6155-e441-4503-8f9c-63031cab912a" target="_blank">Petra</a>
         </div>
-    </main>
 
-    <footer class="main-footer">
-        <div class="container footer-content">
-            <h3>&copy; 2025 BLK Coffee (Jordan).</h3>
+        <div class="back-btn-container">
+            <button onclick="history.back()" class="back-button">← BACK</button>
         </div>
-    </footer>
-</body>
-</html>
+    </div>
+</section>
