@@ -6,12 +6,20 @@
     <title>New Drops | BLK Coffee</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <!-- Header: Same as Index -->
+
+<body class="video-bg-page">
+
+    <div class="fullscreen-video-wrap">
+        <video autoplay muted loop playsinline>
+            <source src="backgroundvideo2.mp4" type="video/mp4">
+        </video>
+    </div>
+
     <header class="main-header">
         <div class="container header-content">
-            <h1 class="logo">BLK</h1>
-
+            <a href="index.html" class="logo-link">
+                <img src="logo.png" alt="BLK Coffee Logo" class="main-logo">
+            </a>
             <nav class="main-nav">
                 <ul>
                     <li><a href="index.html" class="nav-link">Home</a></li>
@@ -21,83 +29,60 @@
         </div>
     </header>
 
-    <main class="main-content">
+    <main class="main-content" id="new-drops-page">
         <div class="container">
             
-            <!-- Back Button -->
-            <button onclick="history.back()" class="back-button">
-                &larr; BACK
-            </button>
-
-            <!-- Header Section -->
-            <section class="about-content" style="margin-bottom: 3rem; text-align: center;">
-                <h1 class="page-title blk-title-font" style="border-bottom: none; margin-bottom: 0.5rem;">
-                    FRESH DROPS
-                </h1>
-                <p class="body-text">Coffee, Food and Merch</p>
+            <section class="about-content" style="margin-top: 3rem; margin-bottom: 3rem; text-align: center;">
+               <h2 class="hero-title">FRESH DROPS</h2>
+                <br>
+                <span style="color: #ffef63; font-weight: 800; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px; display: block; margin-bottom: 10px;"> Coffee, Food and Merch</span>
             </section>
 
-            <!-- 4-Item Grid -->
             <section class="merch-grid-section">
                 <div class="merch-grid">
                     
-                    <!-- Product 1 -->
                     <article class="merch-card">
-               
-                        <div class="merch-image-placeholder" style="background-image: url('drop1.png'); background-size: cover; background-position: center;">
-                     
-                            
-                        </div>
+                        <div class="merch-image-placeholder" style="background-image: url('blkimages/drop1.png');"></div>
                         <div class="merch-info">
                             <h3 class="merch-name blk-title-font">Pumpkin Crumble Muffin</h3>
                         </div>
                     </article>
 
-                    <!-- Product 2 -->
                     <article class="merch-card">
-                   
-                        <div class="merch-image-placeholder" style="background-image: url('drop2.png'); background-size: cover; background-position: center;">
-                            
-                        </div>
+                        <div class="merch-image-placeholder" style="background-image: url('blkimages/drop2.png');"></div>
                         <div class="merch-info">
                             <h3 class="merch-name blk-title-font">BLK Water Bottles</h3>
                         </div>
                     </article>
 
-                    <!-- Product 3 -->
                     <article class="merch-card">
-              
-                        <div class="merch-image-placeholder" style="background-image: url('drop3.png'); background-size: cover; background-position: center;">
-                           
-                        </div>
+                        <div class="merch-image-placeholder" style="background-image: url('blkimages/drop3.png');"></div>
                         <div class="merch-info">
                             <h3 class="merch-name blk-title-font">Khalta Hazelnut 340g</h3>
                         </div>
                     </article>
 
-                    <!-- Product 4 -->
                     <article class="merch-card">
-           
-                        <div class="merch-image-placeholder" style="background-image: url('drop4.png'); background-size: cover; background-position: center;">
-                            
-                        </div>
+                        <div class="merch-image-placeholder" style="background-image: url('blkimages/drop4.png');"></div>
                         <div class="merch-info">
-                            <h3 class="merch-name blk-title-font">
-Coffee Bean 250g</h3>
+                            <h3 class="merch-name blk-title-font">Coffee Bean 250g</h3>
                         </div>
                     </article>
 
                 </div>
             </section>
-
         </div>
     </main>
 
-    <!-- Footer: Same as Index -->
+    <div class="back-btn-container">
+        <button onclick="history.back()" class="back-button">← BACK</button>
+    </div>
+
     <footer class="main-footer">
         <div class="container footer-content">
-            <h3>&copy; 2026 BLK Coffee (Jordan).</h3>
+            <h3>© 2026 BLK Coffee (Jordan)</h3>
         </div>
     </footer>
+   
 </body>
 </html>

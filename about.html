@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,56 +6,79 @@
     <title>About Us | BLK Coffee</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <!-- Header: Matches index.html -->
-    <header class="main-header">
-        <div class="container header-content">
-            <h1 class="logo">BLK</h1>
+   <header class="main-header">
+    <div class="container header-content">
+        <a href="index.html" class="logo-link">
+            <img src="logo.png" alt="BLK Coffee Logo" class="main-logo">
+        </a>
 
             <nav class="main-nav">
                 <ul>
-                    <li><a href="index.html" class="nav-link">Home</a></li>
-                    <li><a href="about.html" class="nav-link current-page">About Us</a></li>
+                    <li><a href="index.html" class="nav-link current-page">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About Us</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main class="main-content">
-        <div class="container">
-            
-            <!-- Hero Section -->
-            <section class="hero-section" style="
-                background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('blk concept 2.png');
-                background-size: cover;
-                background-position: left;
-            ">
-                <h2 class="hero-title">
-                    ABOUT<br>QAHWA BLK
-                </h2>
-            </section>
+<main class="main-content" id="about-us-page">
+   
+        <section class="hero-section">
+            <div class="hero-overlay">
+                <h2 class="hero-title">ABOUT QAHWA BLK</h2>
+            </div>
+        </section>
 
-            <!-- Text Content Section -->
-            <section class="about-content" style="margin-top: 3rem; margin-bottom: 0.1rem;">
-                <h2 class="section-heading blk-title-font secondary-color">THE CONCEPT</h2>
-                
-                <p class="body-text" style="font-size: 1.25rem; font-weight: 500;">
-                    QahwaBLK Is local Jordanian Grab & Go Espresso bar concept. 
-                    We offer a simple menu of delicious espresso based beverages as well as some light snacks.
-                </p>
-                
-                <button onclick="history.back()" class="back-button">
-    &larr; BACK
-</button>
-            </section>
+        <br>
+            <!-- <h2 class="section-heading">THE CONCEPT</h2> -->
+            <div class="content-wrapper">
+              <p class="body-text">
+    <span style="color: #ffef63; font-weight: 800; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px; display: block; margin-bottom: 10px;"> THE CONCEPT </span>
+    QahwaBLK is a Grab & Go concept focused on speed without sacrificing quality. We offer a curated menu of premium espresso-based beverages and artisanal light snacks for those on the move.
+</p>
+              
+            </div>
+        </section>
+    </div>
+<br>
+<br>
+<br>
 
+ <div class="gallery-grid">
+    <div class="gallery-item large">
+        <img src="blkimages/merch.jpg" alt="Merch">
+    </div>
+ <div class="gallery-item tall">
+        <img src="blkimages/blk concept.png" alt="Blk Concept">
+    </div>
+   
+
+    <div class="gallery-item tall">
+        <img src="blkimages/coffee.png" alt="Blk Coffee">
+    </div>
+    
+    <div class="gallery-item ">
+        <img src="blkimages/drink.png" alt="Blk Exterior">
+    </div>
+     
+ <div class="gallery-item">
+        <img src="blkimages/blk spread.png" alt="blk spread">
+    </div> 
+
+
+   
+
+  
+</div>
+        <div class="back-btn-container">
+            <button onclick="history.back()" class="back-button">← BACK</button>
         </div>
-    </main>
-
-    <!-- Footer: 
+    </div>
+</main>
+ 
     <footer class="main-footer">
         <div class="container footer-content">
-            <h3>&copy; 2025 BLK Coffee (Jordan).</h3>
+            <h3>© 2026 BLK Coffee (Jordan)</h3>
         </div>
     </footer>
 </body>
